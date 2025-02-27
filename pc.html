@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nebulingular pc</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 50px;
+            color: white;
+            font-family: 'Be Vietnam Pro', sans-serif;
+            font-weight: 100;
+            text-align: center;
+            font-size: 18px;
+        }
+        .pc-img {
+            width: 175px;
+            height: 175px;
+			border-radius: 50%;            
+			object-fit: cover;
+            border: 3px solid white;
+            padding: 5px;
+        }
+        .ascii-art {
+            font-family: monospace;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 16px;
+        }
+        .description {
+            margin-top: 20px;
+            max-width: 600px;
+            font-size: 20px;
+        }
+        .home-link {
+            margin-top: 20px;
+            font-size: 18px;
+            text-decoration: none;
+            color: #00bcd4;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom 0.3s;
+        }
+        .home-link:hover {
+            border-bottom: 1px solid #00bcd4;
+        }
+    </style>
+</head>
+<body>
+    <img class="pc-img" src="mypc.png" alt="PC Image">
+    <pre class="ascii-art">
+                               
+  _____ ___.__. ______   ____  
+ /     <   |  | \____ \_/ ___\ 
+|  Y Y  \___  | |  |_> >  \___ 
+|__|_|  / ____| |   __/ \___  >
+      \/\/      |__|        \/ 
+    </pre>
+    <div class="description">
+        Case - KRUX Scor
+        <br>
+        PSU - Corsair RM650X
+        <br>
+        Motherboard - ASRock B650M-H/M.2
+        <br>
+        CPU - AMD Ryzen 5 7500f
+        <br>
+        RAM - Kingston Fury 16GB DDR5 5600MHZ CL32
+        <br>
+        GPU - MSI Ventus 3X GeForce RTX 3070
+        <br>
+        SSD - Lexar NM620 (NVME, 512GB)
+        <br>
+        HDD - HGST HTS541010A9E680 (HDD, 1TB)
+        <br>
+        OS - Microsoft Windows 11 24H2 Pro
+    </div>
+    <a class="home-link" href="index.html">home sweet home</a>
+</body>
+</html>
