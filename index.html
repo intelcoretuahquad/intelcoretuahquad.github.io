@@ -11,18 +11,28 @@
       background: url('image.png') no-repeat center center fixed;
       background-size: cover;
       font-family: Arial, sans-serif;
+      overflow: hidden;
     }
 
     .floating-box {
-      background-color: rgba(0, 0, 0, 0.9);
-      border: 1px solid #666;
-      border-radius: 12px;
-      padding: 40px;
-      max-width: 600px;
+      background-color: #000;
+      border: 2px solid #666;
+      border-radius: 16px;
+      padding: 60px;
+      width: 800px;
+      max-width: 90%;
       margin: auto;
       margin-top: 10%;
       color: white;
-      box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      box-shadow: 0 0 60px rgba(0, 0, 0, 0.6);
+      animation: floaty 3s ease-in-out infinite;
+    }
+
+    @keyframes floaty {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
     }
 
     audio {
@@ -33,10 +43,23 @@
 <body>
   <audio autoplay loop>
     <source src="gigabyte.mp3" type="audio/mpeg">
+    Your browser is ass. Please change it.
   </audio>
 
   <div class="floating-box">
-    <h1>intel the compooter inside</h1>
+    <h1>ntel the compooter inside</h1>
   </div>
+
+  <script>
+    window.addEventListener('click', () => {
+      const audio = document.querySelector('audio');
+      if (audio.paused) {
+        audio.play().catch(e => {
+          console.log("Autoplay no work:", e);
+        });
+      }
+    });
+  </script>
 </body>
 </html>
+
