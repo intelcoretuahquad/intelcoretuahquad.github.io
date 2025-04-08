@@ -14,8 +14,8 @@
        border: 2px solid #888;
        border-radius: 20px;
        padding: 60px 40px;
-       width: 500px;         /* a bit fatter */
-       height: 600px;        /* shorter than before */
+       width: 500px;      
+       height: 600px;   
        width: 500px;
        height: 600px;
        max-width: 90%;
@@ -25,18 +25,19 @@
        animation: floaty 3s ease-in-out infinite;
      }
  
-     .title {
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       gap: 10px;
-     }
- 
-     .title img {
-       width: 32px;
-       height: 32px;
-       border-radius: 50%;
-     }
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row-reverse; 
+}
+
+.title img {
+  width: 32px;
+  height: 32px;
+  border-radius: 0; 
+}
  
      @keyframes floaty {
        0% { transform: translateY(0); }
