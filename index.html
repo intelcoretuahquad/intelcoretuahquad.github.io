@@ -1,32 +1,45 @@
+
+
 <!DOCTYPE html>
- <html lang="en">
- <head>
+<html lang="en">
+<head>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="https://intelcoretuahquad.github.io/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
  <title>Designed by Intel®, the computer inside™</title>
- <link rel="icon" href="favicon.ico" type="image/x-icon">
- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
- <link rel="shortcut icon" href="https://intelcoretuahquad.github.io/favicon.ico" />
-   <link rel="icon" href="favicon.ico" type="image/x-icon">
-   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-   <link rel="shortcut icon" href="https://intelcoretuahquad.github.io/favicon.ico" />
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;400&display=swap" rel="stylesheet">
-  <style>
- @@ -27,8 +27,8 @@
-       border: 2px solid #888;
-       border-radius: 20px;
-       padding: 60px 40px;
-       width: 500px;      
-       height: 600px;   
-       width: 500px;
-       height: 600px;
-       max-width: 90%;
-       margin: auto;
-       margin-top: 5%;
- @@ -38,6 +38,19 @@
-       animation: floaty 3s ease-in-out infinite;
-     }
- 
+ <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: url('image.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: "Be Vietnam Pro", sans-serif;
+      font-weight: 100;
+      font-style: normal;
+      overflow: hidden;
+    }
+
+    .floating-box {
+      background-color: #1f1d1d;
+      border: 2px solid #888;
+      border-radius: 20px;
+      padding: 60px 40px;
+      width: 500px;
+      height: 600px;
+      max-width: 90%;
+      margin: auto;
+      margin-top: 5%;
+      color: white;
+      text-align: center;
+      box-shadow: 0 0 80px rgba(0, 0, 0, 0.7);
+      animation: floaty 3s ease-in-out infinite;
+    }
+
 .title {
   display: flex;
   justify-content: center;
@@ -40,28 +53,40 @@
   height: 32px;
   border-radius: 0; 
 }
- 
-     @keyframes floaty {
-       0% { transform: translateY(0); }
-       50% { transform: translateY(-20px); }
- @@ -50,16 +63,16 @@
-   </style>
- </head>
- <body>
-   <link rel="icon" href="favicon.ico" type="image/x-icon">
- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-   <link rel="shortcut icon" href="https://intelcoretuahquad.github.io/favicon.ico" />
-   <audio autoplay loop>
-     <source src="thepcinside.mp3" type="audio/mpeg">
-     Your browser is ass. Please change it.
-   </audio>
- 
-   <div class="floating-box">
-     <h1>intel the compooter inside</h1>
-     <div class="title">
-       <img src="pfp.png" alt="Profile Picture">
-       <h1>intel core 2 quad</h1>
-     </div>
-   </div>
- 
-   <script>
+
+    @keyframes floaty {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="thepcinside.mp3" type="audio/mpeg">
+    Your browser is ass. Please change it.
+  </audio>
+
+  <div class="floating-box">
+    <div class="title">
+      <img src="pfp.png" alt="Profile Picture">
+      <h1>intel core 2 quad</h1>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('click', () => {
+      const audio = document.querySelector('audio');
+      if (audio.paused) {
+        audio.play().catch(e => {
+          console.log("Autoplay no work:", e);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
