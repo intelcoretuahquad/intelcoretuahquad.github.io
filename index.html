@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="https://intelcoretuahquad.github.io/favicon.ico" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="https://intelcoretuahquad.github.io/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;400&display=swap" rel="stylesheet">
@@ -27,8 +27,8 @@
       border: 2px solid #888;
       border-radius: 20px;
       padding: 60px 40px;
-      width: 500px;         /* a bit fatter */
-      height: 600px;        /* shorter than before */
+      width: 500px;
+      height: 600px;
       max-width: 90%;
       margin: auto;
       margin-top: 5%;
@@ -36,6 +36,19 @@
       text-align: center;
       box-shadow: 0 0 80px rgba(0, 0, 0, 0.7);
       animation: floaty 3s ease-in-out infinite;
+    }
+
+    .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .title img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
     }
 
     @keyframes floaty {
@@ -50,16 +63,16 @@
   </style>
 </head>
 <body>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="https://intelcoretuahquad.github.io/favicon.ico" />
   <audio autoplay loop>
     <source src="thepcinside.mp3" type="audio/mpeg">
     Your browser is ass. Please change it.
   </audio>
 
   <div class="floating-box">
-    <h1>intel the compooter inside</h1>
+    <div class="title">
+      <img src="pfp.png" alt="Profile Picture">
+      <h1>intel core 2 quad</h1>
+    </div>
   </div>
 
   <script>
